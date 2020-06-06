@@ -141,3 +141,72 @@ footer {
   margin-bottom: 0.5vh;
   font-family: "Architects Daughter", cursive;
 }
+
+/* Media queries */
+
+@media screen and (min-width: 1400px) and (max-width: 1700px) {
+  .profile-img {
+    left: 140vh;
+    top: 20vh;
+    width: 35vh;
+  }
+
+  .profile-img:hover {
+    left: 145vh;
+    width: 38vh;
+  }
+
+  .portrait-text {
+    top: 40vh;
+    left: 60vh;
+    width: 85vh;
+    padding: 0.5rem;
+  }
+
+  .portrait-text h1,
+  h2,
+  p {
+    padding: 1rem;
+  }
+
+  .portrait-text h1 {
+    font-size: 5rem;
+  }
+  .portrait-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .portrait-text p {
+    font-size: 2.8rem;
+    line-height: 1.3;
+  }
+
+  .socials img {
+    width: 7vh;
+  }
+
+  .socials img:hover {
+    width: 8vh;
+  }
+
+  .github {
+    top: 2vh;
+    left: 170vh;
+  }
+
+  .youtube {
+    position: fixed;
+    top: 2vh;
+    left: 180vh;
+  }
+
+  .facebook {
+    position: fixed;
+    top: 2vh;
+    left: 190vh;
+  }
+
+  .footer-text {
+    font-size: 1.4rem;
+  }
+}
