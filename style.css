@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: auto;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 50%,
+      rgba(255, 255, 255, 0) 60%,
+      rgb(49, 5, 5) 100%
+    ),
+    url(/img/background3.jpg);
+  background-repeat: repeat;
+  background-position: top;
+}
+
+#portrait {
+  position: relative;
+}
+
+@keyframes pic-move {
+  from {
+    transform: translateX(10%) rotateY(-90deg);
+  }
+  to {
+    transform: translateX(0%) rotateY(0deg);
+  }
+}
+
+.profile-img {
+  position: relative;
+  left: 130vh;
+  top: 10vh;
+  width: 40vh;
+  height: auto;
+  border-radius: 50%;
+  border: 8px solid #d19b6c;
+  z-index: 99;
+  transition: ease-in-out 1s;
+  transform: translateX(10%) rotateY(-90deg);
+  animation: pic-move 1.5s ease-in-out 0.5s forwards;
+  transform-origin: left;
+}
+
+.profile-img:hover {
+  left: 135vh;
+  width: 43vh;
+}
+
+.portrait-text {
+  position: absolute;
+  top: 33vh;
+  left: 65vh;
+  width: 70vh;
+  /*background-color: rgba(128, 128, 128, 0.137);
+  border: 0.5px solid #af845e62;*/
+  padding: 1rem;
+  text-align: center;
+}
+
+.portrait-text h1,
+h2,
+p {
+  padding: 2rem;
+  color: #cbcccc;
+}
+
+.portrait-text h1 {
+  font-size: 6rem;
+  font-family: "Architects Daughter", cursive;
+  text-shadow: 1px 1px 1px #d19b6c;
+}
+.portrait-text h2 {
+  font-size: 4rem;
+  font-family: "Architects Daughter", cursive;
+  text-shadow: 1px 1px 1px #d19b6c;
+}
+.portrait-text p {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-family: "Caveat", cursive;
+}
+
+.socials {
+  position: relative;
+  display: inline-block;
+}
+
+.socials img {
+  width: 6vh;
+  height: auto;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.socials img:hover {
+  width: 7vh;
+}
+
+.github {
+  position: fixed;
+  top: 1vh;
+  left: 150vh;
+}
+
+.youtube {
+  position: fixed;
+  top: 1vh;
+  left: 160vh;
+}
+
+.facebook {
+  position: fixed;
+  top: 1vh;
+  left: 170vh;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 4vh;
+  text-align: center;
+}
+
+.footer-text {
+  color: #885339;
+  font-size: 1.6rem;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+  font-family: "Architects Daughter", cursive;
+}
