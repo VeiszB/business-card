@@ -18,7 +18,7 @@ body {
       rgba(255, 255, 255, 0) 60%,
       rgb(49, 5, 5) 100%
     ),
-    url(/img/background3.jpg);
+    url(img/background3.jpg);
   background-repeat: repeat;
   background-position: top;
 }
