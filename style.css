@@ -23,10 +23,6 @@ body {
   background-position: top;
 }
 
-#portrait {
-  position: relative;
-}
-
 @keyframes pic-move {
   from {
     transform: translateX(10%) rotateY(-90deg);
@@ -36,12 +32,26 @@ body {
   }
 }
 
+#portrait {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portrait-img {
+  display: flex;
+  align-content: flex-end;
+  width: 75%;
+  margin: auto;
+  height: 35vh;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 5vh;
+}
+
 .profile-img {
   position: relative;
-  left: 130vh;
-  top: 10vh;
-  width: 40vh;
-  height: auto;
+  width: auto;
+  height: 35vh;
   border-radius: 50%;
   border: 8px solid #d19b6c;
   z-index: 99;
@@ -52,17 +62,22 @@ body {
 }
 
 .profile-img:hover {
-  left: 135vh;
-  width: 43vh;
+  height: 38vh;
+  width: auto;
+}
+
+.biography {
+  position: relative;
+  top: -10vh;
 }
 
 .portrait-text {
-  position: absolute;
-  top: 33vh;
-  left: 65vh;
-  width: 70vh;
-  /*background-color: rgba(128, 128, 128, 0.137);
-  border: 0.5px solid #af845e62;*/
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  width: 45vw;
+  height: auto;
+  margin: auto;
   padding: 1rem;
   text-align: center;
 }
@@ -70,64 +85,66 @@ body {
 .portrait-text h1,
 h2,
 p {
-  padding: 2rem;
+  padding: 0.5rem;
   color: #cbcccc;
 }
 
 .portrait-text h1 {
-  font-size: 6rem;
+  /*font-size: 6rem;*/
+  font-size: calc(25px + (60 - 25) * ((100vw - 300px) / (1600 - 300)));
   font-family: "Architects Daughter", cursive;
   text-shadow: 1px 1px 1px #d19b6c;
 }
 .portrait-text h2 {
-  font-size: 4rem;
+  /*font-size: 4rem;*/
+  font-size: calc(18px + (40 - 18) * ((100vw - 300px) / (1600 - 300)));
   font-family: "Architects Daughter", cursive;
   text-shadow: 1px 1px 1px #d19b6c;
 }
 .portrait-text p {
-  font-size: 3rem;
-  line-height: 1.5;
+  /*font-size: 3rem;*/
+  font-size: calc(18px + (30 - 18) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1.3;
   font-family: "Caveat", cursive;
 }
 
 .socials {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100vw;
+  min-height: 10vh;
+}
+
+.socials-content {
+  display: flex;
+  width: 20vw;
+  justify-content: space-around;
+  align-content: flex-end;
+  margin-right: 5vh;
+  margin-top: 2vh;
 }
 
 .socials img {
-  width: 6vh;
+  position: relative;
+  width: 8vh;
   height: auto;
+  border: 2px solid #d19b6c;
   border-radius: 50%;
+
   background: #ffffff;
   transition: 1s;
   opacity: 0.6;
+  box-shadow: 2px 1px 1px #58402b;
 }
 
 .socials img:hover {
-  width: 7vh;
-}
-
-.github {
-  position: fixed;
-  top: 1vh;
-  left: 150vh;
-}
-
-.youtube {
-  position: fixed;
-  top: 1vh;
-  left: 160vh;
-}
-
-.facebook {
-  position: fixed;
-  top: 1vh;
-  left: 170vh;
+  opacity: 1;
+  box-shadow: 2px 2px 2px #000000;
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   height: 4vh;
@@ -144,7 +161,7 @@ footer {
 
 /* Media queries */
 
-@media screen and (min-width: 1400px) and (max-width: 1700px) {
+/*@media screen and (min-width: 1400px) and (max-width: 1700px) {
   .profile-img {
     left: 140vh;
     top: 20vh;
@@ -210,3 +227,4 @@ footer {
     font-size: 1.4rem;
   }
 }
+*/
